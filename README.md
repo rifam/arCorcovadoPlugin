@@ -1,2 +1,2 @@
 # arCorcovadoPlugin
-plugin para Atom
+plugin para Atom(access to memory)

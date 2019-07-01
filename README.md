@@ -1,0 +1,2 @@
+# arCorcovadoPlugin
+plugin para Atom

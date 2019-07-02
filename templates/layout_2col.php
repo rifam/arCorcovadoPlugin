@@ -21,10 +21,12 @@
     <?php include_slot('pre') ?>
     <div id="wrapper" class="container" role="main">
 
-      <?php echo get_component('default', 'alerts') ?>
+      <?php echo get_component('default', 'alerts') ?>  
+      
       <div class="row">
-        <div id="homepage-hero">
-        </div>
+      <div id="homepage-hero">
+       </div>
+        
         <div class="span9">
 
           <div id="main-column">
@@ -39,12 +41,11 @@
               </div>
             <?php endif; ?>
 
-            <?php include_slot('after-content') ?>
+            <?php include_slot('after-content')?>
 
           </div>
 
         </div>
-        
         <div class="span3">
 
           <div id="sidebar">

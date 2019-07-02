@@ -19,14 +19,21 @@
     <?php echo get_partial('header') ?>
 
     <?php include_slot('pre') ?>
+    
     <div id="wrapper" class="container" role="main">
 
       <?php echo get_component('default', 'alerts') ?>  
-      
-      <div class="row">
       <div id="homepage-hero">
-       </div>
-        
+      </div>
+      <div class="row">
+        <div class="span3">
+
+          <div id="sidebar">
+
+            <?php include_slot('sidebar') ?>
+
+          </div>
+        </div>
         <div class="span9">
 
           <div id="main-column">
@@ -42,15 +49,6 @@
             <?php endif; ?>
 
             <?php include_slot('after-content')?>
-
-          </div>
-
-        </div>
-        <div class="span3">
-
-          <div id="sidebar">
-
-            <?php include_slot('sidebar') ?>
 
           </div>
 

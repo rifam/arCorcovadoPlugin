@@ -38,7 +38,7 @@
             <?//php include_slot('title') ?>  <!--- bem vindo apenas -->
             <?php include_slot('teste') ?>
            
-            <?php include_slot('before-content') ?>
+            <?//php include_slot('before-content') ?>
 
             <?//php if (!include_slot('content')): ?>
             <!--- 
@@ -47,14 +47,14 @@
               </div> -->
             <?//php endif; ?>
 
-            <?php include_slot('after-content')?>
+            <?//php include_slot('after-content')?>
 
           </div>
 
         </div>
       </div>
     </div>
-   
+    <?php include_slot('post') ?>
     <?php echo get_partial('footer') ?>
   
 

@@ -53,10 +53,6 @@
   <?php echo get_component('default', 'popular', array('limit' => 10, 'sf_cache_key' => $sf_user->getCulture())) ?>
 
 <?php end_slot() ?>
-<?php slot('footer') ?>
-<p> teste footer</p>
-<?php end_slot() ?>
-
 
 <div class="page">
   <?php echo render_value($sf_data->getRaw('content')) ?>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="<?php echo $sf_user->getCulture() ?>" dir="<?php echo sfCultureInfo::getInstance($sf_user->getCulture())->direction ?>">
+
   <head>
     <?php include_http_metas() ?>
     <?php include_metas() ?>
@@ -24,15 +25,14 @@
 
       <?php echo get_component('default', 'alerts') ?>
       <div class="row">
-       <div id="homepage-hero">
-      </div>
-      <!--- <div class="span3">
+        <div id="homepage-hero">
+        </div>
+        <div class="span3">
 
-          <div id="sidebar">
-            <?//php include_slot('sidebar') ?>
-          </div>
-      </div>  --->
-      <div class="span9">
+        <div id="sidebar">
+            <?php include_slot('sidebar') ?>
+        </div>
+        <div class="span9">
           
           <div id="main-column">
             <?//php include_slot('title') ?>  <!--- bem vindo apenas -->
@@ -56,7 +56,5 @@
     </div>
     <?php include_slot('post') ?>
     <?php echo get_partial('footer') ?>
-  
-
   </body>
 </html>

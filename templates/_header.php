@@ -51,7 +51,7 @@
 <?php if (sfConfig::get('app_toggleDescription')): ?>
   <div id="site-slogan">
     <div class="container">
-      <div class="row">
+      <div class="row-fluid">
         <div class="span12">
           <span><?php echo esc_specialchars(sfConfig::get('app_siteDescription')) ?></span> 
         </div>

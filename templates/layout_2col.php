@@ -28,7 +28,7 @@
         <div id="homepage-hero">
         </div>
         <div class="span3">
-
+        
         <div id="sidebar">
             <?php include_slot('sidebar') ?>
         </div>

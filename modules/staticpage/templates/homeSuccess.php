@@ -29,7 +29,7 @@
                 <?php foreach ($browseMenu->getChildren() as $item): ?>
                   <ul>
                     <li>
-                      <a href="<?php echo url_for($item->getPath(array('getUrl' => true, 'resolveAlias' => true))) ?>">
+                      <a href="<?php echo url_for($item->getPath(array('getUrl' => true, 'resolveAlias' => true ))) ?>">
                         <?php if (isset($icons[$item->name])): ?>
                           <?php echo image_tag($icons[$item->name], array('width' => 42, 'height' =>42, 'alt' => '')) ?>
                           <?php endif; ?>
@@ -43,14 +43,6 @@
             </ul>
     </div>          
     <div class = "span6">
-      <h2> xesquedele 2 <?//php echo __('Teste') ?></h2>
-            <ul> 
-              <li> <a><i class="material-icons">folder</i></a></li>
-              <li> <i class="far fa-file-alt">TESTE NEW ICONS</i></li>
-              <li> <i class="fa-star-half">TESTE NEW ICONS</i></li>
-              <li> <i class="far fa-file-alt">TESTE NEW ICONS</i></li>
-              <li> <i class="fa-camera-retro">TESTE NEW ICONS</i></li>
-            </ul>
     </div>            
   </div>              
 </div>            
@@ -59,20 +51,22 @@
 
 <?php slot('sidebar') ?>
 
-  <?php echo get_component('menu', 'staticPagesMenu') ?>
+<?php echo get_component('menu', 'staticPagesMenu') ?>
 
-  <section>
-    <h2><?php echo __('Browse by') ?></h2>
+<section>
+  <h2><?php echo __('Browse by') ?></h2>
     <ul>
-      <?php $browseMenu = QubitMenu::getById(QubitMenu::BROWSE_ID) ?>
-      <?php if ($browseMenu->hasChildren()): ?>
-        <?php foreach ($browseMenu->getChildren() as $item): ?>     
-            <li><a href="<?php echo url_for($item->getPath(array('getUrl' => true, 'resolveAlias' => true))) ?>"><?php echo esc_specialchars($item->getLabel(array('cultureFallback' => true))) ?></a></li>
-        <?php endforeach; ?>
-      <?php endif; ?>
+      <?php foreach ($browseMenu->getChildren() as $item): ?>
+        <?php $object = QubitObject::getById($item[0]); ?>
+                <li>
+                  <a href="<?php echo url_for($item->getPath(array('getUrl' => true, 'resolveAlias' => true))) ?>">
+                  <?php echo esc_specialchars($item->getLabel(array('cultureFallback' => true))) ?></a>       
+                </li> 
+      <?php endforeach; ?>
+       
     </ul>
-  </section>
-
+</section>
+              
   <?php echo get_component('default', 'popular', array('limit' => 10, 'sf_cache_key' => $sf_user->getCulture())) ?>
 
 <?php end_slot() ?>

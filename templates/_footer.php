@@ -1,19 +1,18 @@
 <footer id="portal-uffs-footer">
-    <section id="uffs-footer">
+    <section id="uffs-footer" class="container">
             <!-- Titulo Footer -->
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="tituloFooter">
-                        <h3>FALE CONOSCO</h3>
+                        <h3><strong>FALE CONOSCO</strong></h3>
                     </div>
                 </div>
             </div>
             <!-- Colunas com o Conteúdo -->
-            <div class="row">
+            <div class="row">    <!-- style="margin-left: 0px;" -->
                 <div class="col-xs-11 linhaDivisoria"></div>
                 <!-- Coluna Nº 1 -->
-                <div id="footer-coluna-1" class="col-xs-11 col-xs-offset-1
-                        col-sm-4 col-sm-offset-0 col-md-2 col-lg-2">
+                <div id="footer-coluna-1" class="col-xs-11 col-xs-offset-1 col-sm-4 col-sm-offset-0 col-md-2 col-lg-2">
                     <a id="btn-reitoria" style="text-decoration: none"><h4><strong> Reitoria </strong></h4></a>
                     <div id="info-reitoria" class="blocos-conteudo-footer">
                         <p>Av. Fernando Machado, 108 E</p>
@@ -84,7 +83,7 @@
                     <div class="col-xs-3 col-sm-12 col-md-12 espacamento-coluna-4 icon-twitter-footer">
                         <a href="https://twitter.com/uffsonline">
                             <img alt="Icone Twitter" title="Icone Twitter"
-                                 src="/usr/share/nginx/atom/plugins/arCorcovadoPlugin/images/tt-icon.png">
+                                 src="/images/generic-icons/tt-icon.png">
                             <span> @uffsonline</span>
                         </a>
                     </div>
@@ -92,7 +91,7 @@
                     <div class="col-xs-3 col-sm-12 col-md-12 espacamento-coluna-4 icon-facebook-footer">
                         <a href="https://www.facebook.com/uffsonline">
                             <img alt="Icone Facebook" title="Icone Facebook"
-                                 src="/usr/share/nginx/atom/plugins/arCorcovadoPlugin/images/fb-icon.png">
+                                 src="/images/generic-icons/fb-icon.png">
                             <span> uffsonline </span>
                         </a>
                     </div>
@@ -100,7 +99,7 @@
                     <div class="col-xs-3 col-sm-12 col-md-12 espacamento-coluna-4 icon-instagram-footer">
                         <a href="https://www.instagram.com/escolhiseruffs">
                             <img alt="Icone Instagram" title="Icone Instagram"
-                                 src="/usr/share/nginx/atom/plugins/arCorcovadoPlugin/images/insta-icon.png">
+                                 src="/images/generic-icons/insta-icon.png">
                             <span>  @escolhiseruffs </span>
                         </a>
                     </div>
@@ -108,7 +107,7 @@
                     <div class="col-xs-3 col-sm-12 col-md-12">
                         <a href="https://www.uffs.edu.br/acesso_facil/transparencia/servico-de-informacao-ao-cidadao-e-sic/e-sic">
                             <img class="icon-acesso-facil" alt="Icone Acesso à informação" title="Icone Acesso à informação"
-                                 src="/usr/share/nginx/atom/plugins/arCorcovadoPlugin/images/accessinfo-icon.png">
+                                 src="/images/generic-icons/accessinfo-icon.png">
                         </a>
                     </div>
                 </div>
@@ -123,20 +122,18 @@
                             <span>Site antigo</span>
                         </a>
                     </div>
-                    <!-- Ouvidoria
+                    <!-- Ouvidoria -->
                     <div class="col-xs-4 col-sm-12 col-md-12 espacamento-coluna-5">
                         <a tal:attributes="href string:${context/@@plone_portal_state/portal_url}/institucional/reitoria/ouvidoria/apresentacao">
                             <span>Ouvidoria</span>
                         </a>
                     </div>
-                    -->
-                    <!-- Sala de Imprensa
+                    <!-- Sala de Imprensa -->
                     <div class="col-xs-4 col-sm-12 col-md-12 espacamento-coluna-5">
                         <a tal:attributes="href string:${context/@@plone_portal_state/portal_url}/acesso_facil/imprensa/sala-de-imprensa">
                             <span>Sala de imprensa</span>
                         </a>
                     </div>
-                    -->
                     <!-- Lista Telefônica -->
                     <div class="col-xs-4 col-sm-12 col-md-12 espacamento-coluna-5">
                         <a href="https://telefones.uffs.edu.br">
@@ -155,6 +152,7 @@
                     </div>
                     <!-- Email contato -->
                     <div class="col-xs-4 col-sm-12 col-md-12 espacamento-coluna-5">
+                        <a tal:attributes="href string:${context/@@plone_portal_state/portal_url}/formularios/secretaria-especial-de-laboratorios/uffs-contra-a-aedes">
                             <span>UFFS contra o Aedes</span>
                         </a>
                     </div>
@@ -162,7 +160,6 @@
             </div>
     </section>
 </footer>
-
 
 <?php if (null !== $gaKey = sfConfig::get('app_google_analytics_api_key')): ?>
   <script type="text/javascript">

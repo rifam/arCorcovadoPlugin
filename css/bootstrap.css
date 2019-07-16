@@ -824,7 +824,9 @@ ol ul {
 }
 
 li {
-  line-height: 35px;
+  
+  /*line-height: 20px; */
+  line-height: 50px;
 }
 
 ul.unstyled,

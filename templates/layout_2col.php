@@ -27,34 +27,33 @@
       <div class="row">
         <div id="homepage-hero">
         </div>
-        <div class="span3">
         
-        <div id="sidebar">
+        <div class="span3">
+          <div id="sidebar">
             <?php include_slot('sidebar') ?>
+          </div>    
         </div>
         <div class="span9">
           
           <div id="main-column">
             <?//php include_slot('title') ?>  <!--- bem vindo apenas -->
             <?php include_slot('teste') ?>
-           
             <?//php include_slot('before-content') ?>
-
             <?//php if (!include_slot('content')): ?>
             <!--- 
               <div id="content">
                 <?//php echo $sf_content ?>
               </div> -->
             <?//php endif; ?>
-
             <?//php include_slot('after-content')?>
-
           </div>
-
         </div>
-      </div>
+      </div>   
     </div>
     <?php include_slot('post') ?>
-    <?php echo get_partial('footer') ?>
+    <div class="col-md-12">
+      <?php echo get_partial('footer') ?>
+    </div>  
+    
   </body>
 </html>

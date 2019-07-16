@@ -5,10 +5,49 @@
 <?php end_slot() ?>
 
 <?php slot('teste') ?>
-<div class = "container">
+<div class = "container-teste">
   <div class = "row-fluid">
     <div class = "span6">
-        <h2> xesquedele 1<?//php echo __('Teste') ?></h2>
+        <h2>  <?//php echo __('Teste') ?></h2>
+            <ul>
+              <?php $icons = array(
+                'browseInformationObjects' => '/images/icons-large/folder.png',
+                'browseActors' => '/images/icons-large/folder.png',
+                'browseRepositories' => '/images/icons-large/folder.png',
+                'browseSubjects' => '/images/icons-large/folder.png',
+                'browseFunctions' => '/images/icons-large/folder.png',
+                'browsePlaces' => '/images/icons-large/folder.png',
+                'browseDigitalObjects' => '/images/icons-large/folder.png',
+                'browseTextualDocument'=> '/images/icons-large/folder.png',              //traduzir futuramente
+                'browseIconographicDocument' => '/images/icons-large/folder.png',       //traduzir futuramente
+                'browseSoundDocuments' => '/images/icons-large/folder.png',            //traduzir futuramente
+                'browseAudiovisualsDocument' => '/images/icons-large/folder.png',     //traduzir futuramente
+                'browseHowToSearch' => '/images/icons-large/search.png',             //traduzir futuramente
+                'browseUsefulInformation' => '/images/icons-large/gear-teste.png') ?>  <!--- traduzir futuramente --->
+              <?php $count = 0; ?>
+              <?php $browseMenu = QubitMenu::getById(QubitMenu::BROWSE_ID) ?>
+                <?php if ($browseMenu->hasChildren()): ?>
+                  <?php foreach ($browseMenu->getChildren() as $item): ?>
+                    <?php if (($count <= 5) and ($item != 'browseFunctions')): ?> 
+                      <ul>
+                        <li>
+                          <a href="<?php echo url_for($item->getPath(array('getUrl' => true, 'resolveAlias' => true ))) ?>">
+                            <?php if (isset($icons[$item->name])): ?>
+                              <?php echo image_tag($icons[$item->name], array('width' => 42, 'height' =>42, 'alt' => '')) ?>
+                            <?php endif; ?>
+                            <?php echo esc_specialchars($item->getLabel(array('cultureFallback' => true))) ?>
+                          </a>
+                        </li>
+                        <?php $count++; ?>
+                        <?//php echo $count; ?>  
+                      </ul> 
+                    <?php endif; ?>  
+                  <?php endforeach; ?> 
+                <?php endif; ?> 
+            </ul>
+    </div>          
+    <div class = "span6">
+      <h2>  <?//php echo __('Teste') ?></h2>
             <ul>
               <?php $icons = array(
                 'browseInformationObjects' => '/images/icons-large/icon-archival.png',
@@ -24,51 +63,59 @@
                 'browseAudiovisualsDocument' => '/images/icons-large/folder.png',     //traduzir futuramente
                 'browseHowToSearch' => '/images/icons-large/search.png',             //traduzir futuramente
                 'browseUsefulInformation' => '/images/icons-large/gear-teste.png') ?>  <!--- traduzir futuramente --->
+              <?php $count = 0; ?>
               <?php $browseMenu = QubitMenu::getById(QubitMenu::BROWSE_ID) ?>
-              <?php if ($browseMenu->hasChildren()): ?>
-                <?php foreach ($browseMenu->getChildren() as $item): ?>
-                  <ul>
-                    <li>
-                      <a href="<?php echo url_for($item->getPath(array('getUrl' => true, 'resolveAlias' => true ))) ?>">
-                        <?php if (isset($icons[$item->name])): ?>
-                          <?php echo image_tag($icons[$item->name], array('width' => 42, 'height' =>42, 'alt' => '')) ?>
-                          <?php endif; ?>
-                        <?php echo esc_specialchars($item->getLabel(array('cultureFallback' => true))) ?>
-                      </a>
-                    </li>
-                  </ul>
-                  <br>
-                <?php endforeach; ?>
-              <?php endif; ?>
-            </ul>
-    </div>          
-    <div class = "span6">
+                <?php if ($browseMenu->hasChildren()): ?>
+                  <?php foreach ($browseMenu->getChildren() as $item): ?>
+                    <?//php if (($count < 5)): ?>
+                      <ul>
+                        <li>
+                          <a href="<?php echo url_for($item->getPath(array('getUrl' => true, 'resolveAlias' => true ))) ?>">
+                            <?php if (isset($icons[$item->name]) and ($count > 6)): ?>  
+                              <?php  echo image_tag($icons[$item->name], array('width' => 42, 'height' =>42, 'alt' => '')) ?>
+                            <?php endif; ?>
+                            <?php if ($count > 6): ?>
+                              <?php echo esc_specialchars($item->getLabel(array('cultureFallback' => true))) ?>
+                            <?php endif; ?>
+                          </a>
+                        </li>
+                        <?php $count++; ?>
+                        <?//php echo $count; ?>  
+                      </ul> 
+                    <?//php endif; ?>
+                  <?php endforeach; ?> 
+                <?php endif; ?> 
+            </ul>            
     </div>            
   </div>              
-</div>            
+</div> 
+           
 
 <?php end_slot() ?>
 
 <?php slot('sidebar') ?>
 
 <?php echo get_component('menu', 'staticPagesMenu') ?>
-
+<!--
 <section>
-  <h2><?php echo __('Browse by') ?></h2>
+    <h2><?//php echo __('Browse by') ?></h2>
     <ul>
-      <?php foreach ($browseMenu->getChildren() as $item): ?>
-        <?php $object = QubitObject::getById($item[0]); ?>
-                <li>
-                  <a href="<?php echo url_for($item->getPath(array('getUrl' => true, 'resolveAlias' => true))) ?>">
-                  <?php echo esc_specialchars($item->getLabel(array('cultureFallback' => true))) ?></a>       
-                </li> 
-      <?php endforeach; ?>
-       
+    <?//php $count = 0; ?>
+      <?//php $browseMenu = QubitMenu::getById(QubitMenu::BROWSE_ID) ?>
+      <?//php if ($browseMenu->hasChildren()): ?>
+        <?//php foreach ($browseMenu->getChildren() as $item): ?>
+          <?//php if ($count < 5): ?>      
+            <li><a href="<?//php echo url_for($item->getPath(array('getUrl' => true, 'resolveAlias' => true))) ?>"><?//php echo esc_specialchars($item->getLabel(array('cultureFallback' => true))) ?></a></li>
+            <?//php $count++; ?>
+            <?//php echo $count; ?>
+            <?//php endif; ?>
+        <?//php endforeach; ?>
+      <?//php endif; ?>
     </ul>
-</section>
-              
+  </section>
+              -->     
   <?php echo get_component('default', 'popular', array('limit' => 10, 'sf_cache_key' => $sf_user->getCulture())) ?>
-
+  
 <?php end_slot() ?>
 
 <div class="page">

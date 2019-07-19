@@ -103,6 +103,7 @@
                             <span>  @escolhiseruffs </span>
                         </a>
                     </div>
+                    
                     <!-- Icone Acesso -->
                     <div class="col-xs-3 col-sm-12 col-md-12">
                         <a href="https://www.uffs.edu.br/acesso_facil/transparencia/servico-de-informacao-ao-cidadao-e-sic/e-sic">
@@ -124,13 +125,13 @@
                     </div>
                     <!-- Ouvidoria -->
                     <div class="col-xs-4 col-sm-12 col-md-12 espacamento-coluna-5">
-                        <a tal:attributes="href string:${context/@@plone_portal_state/portal_url}/institucional/reitoria/ouvidoria/apresentacao">
+                        <a href="https://www.uffs.edu.br/institucional/reitoria/ouvidoria/apresentacao">
                             <span>Ouvidoria</span>
                         </a>
                     </div>
                     <!-- Sala de Imprensa -->
                     <div class="col-xs-4 col-sm-12 col-md-12 espacamento-coluna-5">
-                        <a tal:attributes="href string:${context/@@plone_portal_state/portal_url}/acesso_facil/imprensa/sala-de-imprensa">
+                        <a href="https://www.uffs.edu.br/acessofacil/imprensa/sala-de-imprensa">
                             <span>Sala de imprensa</span>
                         </a>
                     </div>

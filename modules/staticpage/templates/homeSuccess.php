@@ -4,20 +4,20 @@
   <h1><?php echo render_title($resource->getTitle(array('cultureFallback' => true))) ?></h1>
 <?php end_slot() ?>
 
-<?php slot('teste') ?>
-<div class = "container-teste">
+<?php slot('icons') ?>
+<div class = "container-test">
   <div class = "row-fluid">
     <div class = "span6">
-        <h2>  <?//php echo __('Teste') ?></h2>
+        <h2>  <?//php echo __('Teste') ?></h2> <!--- insert name to span -->
             <ul>
               <?php $icons = array(
-                'browseInformationObjects' => '/images/icons-large/folder.png',
-                'browseActors' => '/images/icons-large/folder.png',
-                'browseRepositories' => '/images/icons-large/folder.png',
-                'browseSubjects' => '/images/icons-large/folder.png',
+                'browseInformationObjects' => '/images/generic-icons/document.png',
+                'browseActors' => '/images/generic-icons/team.png',
+                'browseRepositories' => '/images/generic-icons/institution.png',
+                'browseSubjects' => '/images/generic-icons/speech.png',
                 'browseFunctions' => '/images/icons-large/folder.png',
-                'browsePlaces' => '/images/icons-large/folder.png',
-                'browseDigitalObjects' => '/images/icons-large/folder.png',
+                'browsePlaces' => '/images/generic-icons/pin.png',
+                'browseDigitalObjects' => '/images/generic-icons/user.png',
                 'browseTextualDocument'=> '/images/icons-large/folder.png',              //traduzir futuramente
                 'browseIconographicDocument' => '/images/icons-large/folder.png',       //traduzir futuramente
                 'browseSoundDocuments' => '/images/icons-large/folder.png',            //traduzir futuramente
@@ -47,7 +47,7 @@
             </ul>
     </div>          
     <div class = "span6">
-      <h2>  <?//php echo __('Teste') ?></h2>
+      <h2>  <?//php echo __('Teste') ?></h2> <!--- insert name to span -->
             <ul>
               <?php $icons = array(
                 'browseInformationObjects' => '/images/icons-large/icon-archival.png',
@@ -57,12 +57,12 @@
                 'browseFunctions' => '/images/icons-large/icon-functions.png',
                 'browsePlaces' => '/images/icons-large/icon-places.png',
                 'browseDigitalObjects' => '/images/icons-large/icon-media.png',
-                'browseTextualDocument'=> '/images/icons-large/folder.png',              //traduzir futuramente
-                'browseIconographicDocument' => '/images/icons-large/folder.png',       //traduzir futuramente
-                'browseSoundDocuments' => '/images/icons-large/folder.png',            //traduzir futuramente
-                'browseAudiovisualsDocument' => '/images/icons-large/folder.png',     //traduzir futuramente
-                'browseHowToSearch' => '/images/icons-large/search.png',             //traduzir futuramente
-                'browseUsefulInformation' => '/images/icons-large/gear-teste.png') ?>  <!--- traduzir futuramente --->
+                'browseTextualDocument'=> '/images/generic-icons/document2.png',              //traduzir futuramente
+                'browseIconographicDocument' => '/images/generic-icons/picture.png',       //traduzir futuramente
+                'browseSoundDocuments' => '/images/generic-icons/volume.png',            //traduzir futuramente
+                'browseAudiovisualsDocument' => '/images/generic-icons/film.png',     //traduzir futuramente
+                'browseHowToSearch' => '/images/generic-icons/search.png',             //traduzir futuramente
+                'browseUsefulInformation' => '/images/generic-icons/info.png') ?>  <!--- traduzir futuramente --->
               <?php $count = 0; ?>
               <?php $browseMenu = QubitMenu::getById(QubitMenu::BROWSE_ID) ?>
                 <?php if ($browseMenu->hasChildren()): ?>
@@ -96,7 +96,7 @@
 <?php slot('sidebar') ?>
 
 <?php echo get_component('menu', 'staticPagesMenu') ?>
-<!--
+<!---
 <section>
     <h2><?//php echo __('Browse by') ?></h2>
     <ul>
@@ -113,7 +113,7 @@
       <?//php endif; ?>
     </ul>
   </section>
-              -->     
+              --->     
   <?php echo get_component('default', 'popular', array('limit' => 10, 'sf_cache_key' => $sf_user->getCulture())) ?>
   
 <?php end_slot() ?>

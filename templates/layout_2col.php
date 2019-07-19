@@ -31,13 +31,13 @@
         <div class="span3">
           <div id="sidebar">
             <?php include_slot('sidebar') ?>
-          </div>    
+          </div> 
         </div>
         <div class="span9">
           
           <div id="main-column">
-            <?//php include_slot('title') ?>  <!--- bem vindo apenas -->
-            <?php include_slot('teste') ?>
+            <?//php include_slot('title') ?>  <!--- insert welcome or outher phrase bellow image -->
+            <?php include_slot('icons') ?>
             <?//php include_slot('before-content') ?>
             <?//php if (!include_slot('content')): ?>
             <!--- 

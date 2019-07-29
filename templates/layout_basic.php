@@ -16,52 +16,19 @@
   </head>
   <body class="yui-skin-sam <?php echo $sf_context->getModuleName() ?> <?php echo $sf_context->getActionName() ?>">
 
-    <?php echo get_partial('header') ?>
+    <?php echo get_component('default', 'alerts') ?>
 
     <?php include_slot('pre') ?>
 
-    <div id="wrapper" class="container" role="main">
-
-      <?php echo get_component('default', 'alerts') ?>
-
-      <div class="row">
-
-        <div class="span3">
-
-          <div id="sidebar">
-
-            <?php include_slot('sidebar') ?>
-
-          </div>
-
-        </div>
-
-        <div class="span8">
-
-          <div id="main-column">
-
-            <?php include_slot('title') ?>
-
-            <?php include_slot('before-content') ?>
-
-            <?php if (!include_slot('content')): ?>
-              <div id="content">
-                <?php echo $sf_content ?>
-              </div>
-            <?php endif; ?>
-
-            <?php include_slot('after-content') ?>
-
-          </div>
-
-        </div>
-
+    <?php if (!include_slot('content')): ?>
+      <div id="content" role="main">
+        <?php echo $sf_content ?>
       </div>
-
-    </div>
+    <?php endif; ?>
 
     <?php include_slot('post') ?>
 
+    <?php echo get_partial('footer') ?>
 
   </body>
 </html>

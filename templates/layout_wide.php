@@ -18,50 +18,23 @@
 
     <?php echo get_partial('header') ?>
 
-    <?php include_slot('pre') ?>
+    <div role="main">
 
-    <div id="wrapper" class="container" role="main">
+      <?php include_slot('before-content') ?>
 
       <?php echo get_component('default', 'alerts') ?>
 
-      <div class="row">
-
-        <div class="span3">
-
-          <div id="sidebar">
-
-            <?php include_slot('sidebar') ?>
-
-          </div>
-
+      <?php if (!include_slot('content')): ?>
+        <div class="container-fluid">
+          <?php echo $sf_content ?>
         </div>
+      <?php endif; ?>
 
-        <div class="span8">
-
-          <div id="main-column">
-
-            <?php include_slot('title') ?>
-
-            <?php include_slot('before-content') ?>
-
-            <?php if (!include_slot('content')): ?>
-              <div id="content">
-                <?php echo $sf_content ?>
-              </div>
-            <?php endif; ?>
-
-            <?php include_slot('after-content') ?>
-
-          </div>
-
-        </div>
-
-      </div>
+      <?php include_slot('after-content') ?>
 
     </div>
 
-    <?php include_slot('post') ?>
-    <?php include_slot('footer') ?>
+    <?php echo get_partial('footer') ?>
 
   </body>
 </html>

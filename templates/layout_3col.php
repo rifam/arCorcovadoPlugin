@@ -36,21 +36,39 @@
 
         </div>
 
-        <div class="span8">
+        <div class="span9">
 
           <div id="main-column">
 
             <?php include_slot('title') ?>
 
-            <?php include_slot('before-content') ?>
+            <div class="row">
 
-            <?php if (!include_slot('content')): ?>
-              <div id="content">
-                <?php echo $sf_content ?>
+              <div class="span7">
+
+                <?php include_slot('before-content') ?>
+
+                <?php if (!include_slot('content')): ?>
+                  <div id="content">
+                    <?php echo $sf_content ?>
+                  </div>
+                <?php endif; ?>
+
+                <?php include_slot('after-content') ?>
+
               </div>
-            <?php endif; ?>
 
-            <?php include_slot('after-content') ?>
+              <div class="span2">
+
+                <div id="context-menu">
+
+                  <?php include_slot('context-menu') ?>
+
+                </div>
+
+              </div>
+
+            </div>
 
           </div>
 
@@ -61,7 +79,8 @@
     </div>
 
     <?php include_slot('post') ?>
-    <?php include_slot('footer') ?>
+
+    <?//php echo get_partial('footer') ?>
 
   </body>
 </html>

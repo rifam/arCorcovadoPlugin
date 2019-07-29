@@ -1,4 +1,4 @@
-<?php decorate_with('layout_2col') ?>
+<?php decorate_with('layout_uffshome') ?>
 
 <?php slot('title') ?>
   <h1><?php echo render_title($resource->getTitle(array('cultureFallback' => true))) ?></h1>

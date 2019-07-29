@@ -24,44 +24,23 @@
 
       <?php echo get_component('default', 'alerts') ?>
 
-      <div class="row">
+      <?php include_slot('title') ?>
 
-        <div class="span3">
+      <?php include_slot('before-content') ?>
 
-          <div id="sidebar">
-
-            <?php include_slot('sidebar') ?>
-
-          </div>
-
+      <?php if (!include_slot('content')): ?>
+        <div id="content">
+          <?php echo $sf_content ?>
         </div>
+      <?php endif; ?>
 
-        <div class="span8">
-
-          <div id="main-column">
-
-            <?php include_slot('title') ?>
-
-            <?php include_slot('before-content') ?>
-
-            <?php if (!include_slot('content')): ?>
-              <div id="content">
-                <?php echo $sf_content ?>
-              </div>
-            <?php endif; ?>
-
-            <?php include_slot('after-content') ?>
-
-          </div>
-
-        </div>
-
-      </div>
+      <?php include_slot('after-content') ?>
 
     </div>
 
     <?php include_slot('post') ?>
-    <?php include_slot('footer') ?>
+
+    <?//php echo get_partial('footer') ?>
 
   </body>
 </html>

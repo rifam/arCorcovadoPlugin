@@ -16,12 +16,12 @@
  */
 
 #homepage-hero {
-  background: url(../../images/uffs10anos.png);
-  max-width: 100%; 
-	height: 300px; 
+  background: url(../../images/uffs10anos.png) no-repeat;
+  max-width:100%;
+  height: 300px;
   padding-top: 50px;
   padding-bottom: 50px;
- 
+
   h1,
   h2,
   p,
@@ -172,64 +172,70 @@
   }
 
 }
-
-.container-test{
-  .span6 li{
-    line-height: 65px;
-  }
-  a{
-    font-size: 16px;
-    font-family: @sansBoldFontFamily;
-  }
-  margin-bottom: 20px;  
-}
-
- //Popular this week
-
-#popular-this-week {
-
-  color: @white;
-  background-color: rgba(0, 0, 0, .10);
-
-  h3 {
-    padding: 8px;
-    margin: 0;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, .4);
-    background-color: rgba(0, 0, 0, .10);
-  }
-
-  ul {
-    margin: 0;
-    padding: 4px 0;
-  }
-
-  li {
-    position: relative;
-    padding: 0;
-    margin: 0;
-  }
-
-  a {
-    color: @white;
-    display: block;
-    padding: 3px 72px 3px 8px;
-    .text-overflow();
-    &:hover {
-      background-color: rgba(0, 0, 0, .10);
+.span12{
+  
+  margin-left: 0px;
+  
+  .container-home{
+    .span4 li{
+      line-height: 65px;
     }
+    a{
+      font-size: 16px;
+      font-family: @sansBoldFontFamily;
+    }
+    margin-bottom: 20px;  
   }
 
-  strong {
-    position: absolute;
-    right: 4px;
-    color: @gray;
-    padding-left: 4px;
-    font-weight: normal;
-    font-style: oblique;
-  }
+  //Popular this week
 
+  #popular-this-week {
+
+    color: @grayDark;
+    background-color: none;
+
+    h3 {
+      padding: 8px;
+      margin: 0;
+    
+    }
+
+    ul {
+      margin: 0;
+      padding: 4px 0;
+    }
+
+    li {
+      position: relative;
+      padding: 0;
+      margin: 0;
+      line-height: 30px;
+    }
+
+    a {
+      color: @green;
+      font-family: @sansFontFamily;
+      font-size: 13px;
+      display: block;
+      padding: 3px 30px 3px 8px;
+      .text-overflow();
+      &:hover {
+        background-color: rgba(0, 0, 0, .10);
+      }
+    }
+
+    strong {
+      color: @grayDark;
+      position: absolute;
+      right: 4px;
+      padding-left: 4px;
+      font-weight: normal;
+      font-style: oblique;
+      
+    }
+
+  }
 }
-
 // Responsive design
 
 @media (max-width: 767px) {

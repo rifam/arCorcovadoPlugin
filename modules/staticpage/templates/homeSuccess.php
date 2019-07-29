@@ -5,9 +5,9 @@
 <?php end_slot() ?>
 
 <?php slot('icons') ?>
-<div class = "container-test">
+<div class = "container-home">
   <div class = "row-fluid">
-    <div class = "span6">
+    <div class = "span4">
         <h2>  <?//php echo __('Teste') ?></h2> <!--- insert name to span -->
             <ul>
               <?php $icons = array(
@@ -31,11 +31,11 @@
                     <?php if (($count <= 5) and ($item != 'browseFunctions')): ?> 
                       <ul>
                         <li>
-                          <a href="<?php echo url_for($item->getPath(array('getUrl' => true, 'resolveAlias' => true ))) ?>">
+                          <a href="<?php echo url_for($item->getPath(array('getUrl' => true, 'resolveAlias' => true  ))) ?>">
                             <?php if (isset($icons[$item->name])): ?>
                               <?php echo image_tag($icons[$item->name], array('width' => 42, 'height' =>42, 'alt' => '')) ?>
                             <?php endif; ?>
-                            <?php echo esc_specialchars($item->getLabel(array('cultureFallback' => true))) ?>
+                            <?php echo esc_specialchars($item->getLabel(array('cultureFallback' => true ))) ?>
                           </a>
                         </li>
                         <?php $count++; ?>
@@ -46,7 +46,7 @@
                 <?php endif; ?> 
             </ul>
     </div>          
-    <div class = "span6">
+    <div class = "span4">
       <h2>  <?//php echo __('Teste') ?></h2> <!--- insert name to span -->
             <ul>
               <?php $icons = array(
@@ -67,7 +67,6 @@
               <?php $browseMenu = QubitMenu::getById(QubitMenu::BROWSE_ID) ?>
                 <?php if ($browseMenu->hasChildren()): ?>
                   <?php foreach ($browseMenu->getChildren() as $item): ?>
-                    <?//php if (($count < 5)): ?>
                       <ul>
                         <li>
                           <a href="<?php echo url_for($item->getPath(array('getUrl' => true, 'resolveAlias' => true ))) ?>">
@@ -79,14 +78,15 @@
                             <?php endif; ?>
                           </a>
                         </li>
-                        <?php $count++; ?>
-                        <?//php echo $count; ?>  
+                        <?php $count++; ?>  
                       </ul> 
-                    <?//php endif; ?>
                   <?php endforeach; ?> 
                 <?php endif; ?> 
             </ul>            
-    </div>            
+    </div>
+    <div class = "span4"> 
+      <?php echo get_component('default', 'popular', array('limit' => 10, 'sf_cache_key' => $sf_user->getCulture())) ?>          
+    </div>           
   </div>              
 </div> 
            
@@ -96,26 +96,7 @@
 <?php slot('sidebar') ?>
 
 <?php echo get_component('menu', 'staticPagesMenu') ?>
-<!---
-<section>
-    <h2><?//php echo __('Browse by') ?></h2>
-    <ul>
-    <?//php $count = 0; ?>
-      <?//php $browseMenu = QubitMenu::getById(QubitMenu::BROWSE_ID) ?>
-      <?//php if ($browseMenu->hasChildren()): ?>
-        <?//php foreach ($browseMenu->getChildren() as $item): ?>
-          <?//php if ($count < 5): ?>      
-            <li><a href="<?//php echo url_for($item->getPath(array('getUrl' => true, 'resolveAlias' => true))) ?>"><?//php echo esc_specialchars($item->getLabel(array('cultureFallback' => true))) ?></a></li>
-            <?//php $count++; ?>
-            <?//php echo $count; ?>
-            <?//php endif; ?>
-        <?//php endforeach; ?>
-      <?//php endif; ?>
-    </ul>
-  </section>
-              --->     
-  <?php echo get_component('default', 'popular', array('limit' => 10, 'sf_cache_key' => $sf_user->getCulture())) ?>
-  
+
 <?php end_slot() ?>
 
 <div class="page">

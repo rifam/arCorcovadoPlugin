@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="<?php echo $sf_user->getCulture() ?>" dir="<?php echo sfCultureInfo::getInstance($sf_user->getCulture())->direction ?>">
-
   <head>
     <?php include_http_metas() ?>
     <?php include_metas() ?>
@@ -20,28 +19,49 @@
     <?php echo get_partial('header') ?>
 
     <?php include_slot('pre') ?>
-    
+
     <div id="wrapper" class="container" role="main">
 
       <?php echo get_component('default', 'alerts') ?>
+
       <div class="row">
 
-        <div id="homepage-hero">  
-        </div>
-        
-        <div class="span12"> 
-          <div id="main-column">
-            <?//php include_slot('title') ?>  <!--- insert welcome or outher phrase bellow image -->
-            <?php include_slot('icons') ?>
+        <div class="span3">
+
+          <div id="sidebar">
+
+            <?php include_slot('sidebar') ?>
+
           </div>
+
         </div>
-      </div>   
+
+        <div class="span8">
+
+          <div id="main-column">
+
+            <?php include_slot('title') ?>
+
+            <?php include_slot('before-content') ?>
+
+            <?php if (!include_slot('content')): ?>
+              <div id="content">
+                <?php echo $sf_content ?>
+              </div>
+            <?php endif; ?>
+
+            <?php include_slot('after-content') ?>
+
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
 
     <?php include_slot('post') ?>
-    
-    <div class="col-md-12">
-      <?php echo get_partial('footer') ?>
-    </div>  
+
+
   </body>
 </html>

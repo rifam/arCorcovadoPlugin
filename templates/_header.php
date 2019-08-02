@@ -22,7 +22,7 @@
 
   <nav>
 
-    <?php echo get_component('menu', 'userMenu') ?>
+    <?//php echo get_component('menu', 'userMenu') ?>  <!--- button login --->
 
     <?php echo get_component('menu', 'quickLinksMenu') ?>
 

@@ -119,8 +119,8 @@
                         col-sm-4 col-sm-offset-0 col-md-2 col-lg-2">
                     <!-- Acesso Site Antigo -->
                     <div class="col-xs-4 col-sm-12 col-md-12 espacamento-coluna-5">
-                        <a href="http://historico.uffs.edu.br">
-                            <span>Site antigo</span>
+                        <a href="http://uffs.edu.br">
+                            <span>Site UFFS</span>
                         </a>
                     </div>
                     <!-- Ouvidoria -->
@@ -152,11 +152,13 @@
                         <a>contato@uffs.edu.br</a>
                     </div>
                     <!-- Email contato -->
+                    <!--
                     <div class="col-xs-4 col-sm-12 col-md-12 espacamento-coluna-5">
                         <a tal:attributes="href string:${context/@@plone_portal_state/portal_url}/formularios/secretaria-especial-de-laboratorios/uffs-contra-a-aedes">
                             <span>UFFS contra o Aedes</span>
                         </a>
                     </div>
+                    -->
                 </div>
             </div>
     </section>

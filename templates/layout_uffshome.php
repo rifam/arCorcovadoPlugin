@@ -26,7 +26,8 @@
       <?php echo get_component('default', 'alerts') ?>
       <div class="row">
 
-        <div id="homepage-hero">  
+        <div id="homepage-hero" alt='Banner imagem comemoração UFFS' title='Imagem comemorando 10 anos da UFFS'>
+
         </div>
         
         <div class="span12"> 

@@ -36,7 +36,7 @@
 
         </div>
 
-        <div class="span8">
+        <div class="span9">
 
           <div id="main-column">
 
@@ -61,7 +61,8 @@
     </div>
 
     <?php include_slot('post') ?>
-    <?php include_slot('footer') ?>
+
+    <?//php echo get_partial('footer') ?>
 
   </body>
 </html>

@@ -17,10 +17,12 @@
 
 #homepage-hero {
   background: url(../../images/uffs10anos.png) no-repeat;
-  max-width:100%;
+  .background-size(cover);
   height: 300px;
   padding-top: 50px;
   padding-bottom: 50px;
+  margin-left:10%;
+  margin-right: -10%;
 
   h1,
   h2,
@@ -118,7 +120,6 @@
     background-position: 0 80%;
     background-size: cover;
     width: 100%;
-    display: block;
     height: 280px;
   }
 
@@ -177,6 +178,7 @@
   margin-left: 0px;
   
   .container-home{
+    }
     .span4 li{
       line-height: 65px;
     }
@@ -195,6 +197,10 @@
     background-color: none;
     font-family: @sansBoldFontFamily;
 
+    span4{
+      overflow: hidden;
+      max-height: 420px; 
+    }
     h4 {
       padding: 8px;
       margin: 0;
@@ -210,7 +216,7 @@
       position: relative;
       padding: 0;
       margin: 0;
-      line-height: 30px;
+      line-height: 20px;
     }
 
     a {
@@ -218,8 +224,8 @@
       font-family: @sansFontFamily;
       font-size: 13px;
       display: block;
-      padding: 3px 62px 3px 8px;
-      //overflow: hidden;
+      padding: 3px 72px 3px 8px;
+      overflow: hidden;
       //white-space: nowrap;
       &:hover {
         background-color: rgba(0, 0, 0, .10);
@@ -236,7 +242,7 @@
       
     }
 
-  }
+  
 }
 // Responsive design
 
@@ -254,10 +260,13 @@
 
   #homepage-hero {
 
-    //background: none;
+    background: none;
     padding-top: 40px;
     margin-top: 20px;
-
+    margin-left: 10px;
+    margin-right: 10px;
+    
+    
   }
 
   #homepage-nav {
@@ -293,7 +302,6 @@
   #intro p {
     font-size: 13px;
   }
-
 }
 
 @media (max-width: 979px) {
@@ -314,6 +322,14 @@
     padding: 20px;
     background-color: rgba(0, 0, 0, .25);
   }
-
+  #homepage-hero {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;  
+  }
+  
 }
+
+
 

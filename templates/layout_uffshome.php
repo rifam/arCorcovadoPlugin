@@ -20,16 +20,16 @@
     <?php echo get_partial('header') ?>
 
     <?php include_slot('pre') ?>
-    
+    <div class="col-md-10">
+      <div id="homepage-hero" alt='Banner imagem comemoração UFFS' title='Imagem comemoração 10 anos da UFFS'>
+        
+      </div>
+    </div> 
     <div id="wrapper" class="container" role="main">
 
       <?php echo get_component('default', 'alerts') ?>
       <div class="row">
 
-        <div id="homepage-hero" alt='Banner imagem comemoração UFFS' title='Imagem comemorando 10 anos da UFFS'>
-
-        </div>
-        
         <div class="span12"> 
           <div id="main-column">
             <?//php include_slot('title') ?>  <!--- insert welcome or outher phrase bellow image -->

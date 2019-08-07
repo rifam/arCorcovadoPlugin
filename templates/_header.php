@@ -50,6 +50,8 @@
 
 <?php if (sfConfig::get('app_toggleDescription')): ?>
   <div id="site-slogan">
+    <a href="https://www.accesstomemory.org/pt-br/" target="_blank">
+    <img src="../../images/logo-white.png"></a>
     <div class="container">
       <div class="row-fluid">
         <div class="span12">

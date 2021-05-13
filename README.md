@@ -2,7 +2,7 @@
 Tema de plugin padrão do [Atom(access to memory)](https://www.accesstomemory.org/)
 
 #### Instalação e configuração do projeto
-Seguir a documentação para instalar o projeto [Documentação Atom]https://www.accesstomemory.org/pt-br/docs).
+Seguir a documentação para instalar o projeto [Documentação Atom](https://www.accesstomemory.org/pt-br/docs).
 Fazer o gitclone dentro da pasta arCorcovadoPlugin
 Selecionar no painel do administrador de plugins o "arCorcovadoPlugin"
 
